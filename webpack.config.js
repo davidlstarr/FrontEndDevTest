@@ -1,3 +1,6 @@
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+
 module.exports = {
     entry: './src/js/main.js',
     output: {
@@ -6,17 +9,28 @@ module.exports = {
         publicPath: '/resources/js'
     },
      module: {
-        loaders: [
+        rules: [
             // ...
             {
                 test: /\.scss$/,
-                loaders: ['style-loader', 'css-loader', 'sass-loader']
+                use: ExtractTextPlugin.
+                extract({
+                    fallback: "style-loader",
+                     use: ['css-loader', 'sass-loader']
+                })
             }
         ],
-         plugins: [
-        new ExtractTextPlugin('public/style.css', {
-            allChunks: true
-        })
-    ]
-    }
+},
+plugins:[
+    new ExtractTextPlugin('../../dist/style.css'),
+    new BrowserSyncPlugin({
+	      // browse to http://localhost:8080/ during development, 
+	      // ./public directory is being served 
+	      host: 'localhost',
+	      port: 8080,
+          files: ['*.php']
+	   
+})
+],
+watch: true,
 }

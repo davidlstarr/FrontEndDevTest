@@ -1,2 +1,2 @@
 require('../scss/main.scss');
-console.log('Hello Webpack');
+console.log('Hello Webpack2');
