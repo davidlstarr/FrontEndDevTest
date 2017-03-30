@@ -1,0 +1,49 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "just testing local development process in linux",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --inline",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server_start": "sudo /opt/lampp/lampp start",
+    "server_stop":"sudo /opt/lampp/lampp stop",
+    "xampp": "sudo /opt/lampp/manager-linux-x64.run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidlstarr/test.git"
+  },
+  "author": "David Starr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidlstarr/test/issues"
+  },  
+  "homepage": "https://github.com/davidlstarr/test#readme",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.3.13",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.27.2",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^1.16.3",
+    "browser-sync": "^2.18.8",
+    "browser-sync-webpack-plugin": "^1.1.4"
+  }
+}
